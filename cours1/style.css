@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/galaxie.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    text-underline-position: under;
+}
+
+#div_horloge {
+    padding-top: 12%;
+    font-size: 700%;
+    font-family: sans-serif;
+}
+
+h1 {
+    padding-top: 0px;
+    padding-bottom: 35px;
+    font-size: 250%;
+}
+
+#top-left {
+    float: left;
+    padding: 10px;
+}
+
+#top-right {
+    padding: 10px;
+    float: right;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+#top-right p {
+    padding: 0 auto;
+}
+
+.hidden:hover {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0.0;
+}
+
+#bot-right {
+    text-align: right;
+    opacity: 0.8;
+    float: right;
+    font-size: 0.7em;
+    padding: 0;
+}
+
+#bot-left {
+    text-align: left;
+    opacity: 0.8;
+    font-size: 0.7em;
+    float: left;
+    padding: 0;
+}
+
+label {
+    text-decoration: none;
+}
