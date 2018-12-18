@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    padding: 10%;
+    margin: 10%;
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    text-align: left;
+}
+
+.logo {
+    width: 2%;
+}
+
+div img {
+    float: right;
+    width: 600px;
+}
+
+div input {
+    width: 25%;
+    text-align: left;
+}
+
+button {
+    border-radius: 10px 10px 10px 10px;
+    color: #fff;
+    background-color: aqua;
+    border-color: aqua;
+    margin: 15px;
+    padding: 5px;
+}
