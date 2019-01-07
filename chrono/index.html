@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <title>StopWatch</title>
+</head>
+
+<body>
+    <div id="compteur">
+        <p id="output"></p>
+        <div id="controls">
+            <button id="startPause" onclick="startPause()">start</button>
+            <button onclick="reset()">reset</button>
+            <button onclick="getTimer()">get timer</button>
+            <ul id="display"></ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var time = 0;
+        var running = 0;
+
+        function startPause() {
+            if (running == 0) {
+                running = 1;
+                increment();
+                document.getElementById("startPause").innerHTML = "Pause";
+            } else {
+                running = 0
+                document.getElementById("startPause").innerHTML = "resume";
+            }
+        }
+
+        function reset() {
+            running = 0;
+            time = 0;
+            document.getElementById("startPause").innerHTML = "Start";
+            document.getElementById("output").innerHTML = "00:00:00";
+        }
+
+        function getTimer() {
+            document.getElementById("display").innerHTML = mins + ":" + secs + ":" + tenths;
+        }
+
+        function increment() {
+            if (running == 1) {
+                setTimeout(function() {
+                    time++;
+                    var mins = Math.floor(time / 10 / 60);
+                    var secs = Math.floor(time / 10);
+                    var tenths = time % 10;
+                    if (mins < 10) {
+                        mins = "0" + mins;
+                    }
+                    if (secs < 10) {
+                        secs = "0" + secs;
+                    }
+                    if (secs == 60) {
+                        secs = 0;
+                    }
+                    document.getElementById("output").innerHTML = mins + ":" + secs + ":" + tenths;
+                    increment();
+
+                }, 100);
+            }
+        }
+    </script>
+</body>
+
+</html>
